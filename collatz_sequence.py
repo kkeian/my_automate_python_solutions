@@ -8,6 +8,9 @@ print('Enter a number:')
 
 eventually_one = None
 while eventually_one != 1:
-    number = int(input())
-    print(collatz(number))
-    eventually_one = collatz(number)
+    try:
+        number = int(input())
+        print(collatz(number))
+        eventually_one = collatz(number)
+    except ValueError:
+        print('Enter a number genius.')
